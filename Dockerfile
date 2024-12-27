@@ -68,6 +68,7 @@ RUN set x; \
 	php8.1-yaml \
 	php8.1-ldap \
 	libapache2-mod-fcgid \
+	libfcgi-bin \
 	&& aptitude clean \
 	&& rm -rf /var/lib/apt/lists/*
 
