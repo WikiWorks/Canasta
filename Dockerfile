@@ -116,14 +116,12 @@ RUN set -x; \
 # Skins
 COPY _sources/scripts/extensions-skins.php /tmp/extensions-skins.php
 COPY _sources/patches/* /tmp/
-COPY _sources/configs/skins.yaml /tmp/skins.yaml
-RUN php /tmp/extensions-skins.php "skins" "/tmp/skins.yaml"
 
 # Extensions
 # The following extensions are downloaded via Composer and also do not need to be downloaded here:
 # Bootstrap, DataValues (and related extensions like DataValuesCommon), ParserHooks.
-COPY _sources/configs/extensions.yaml /tmp/extensions.yaml
-RUN php /tmp/extensions-skins.php "extensions" "/tmp/extensions.yaml"
+COPY _sources/configs/contents.yaml /tmp/contents.yaml
+RUN php /tmp/extensions-skins.php "/tmp/contents.yaml"
 
 # Patch composer
 RUN set -x; \

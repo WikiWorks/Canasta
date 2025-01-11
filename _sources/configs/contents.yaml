@@ -1,7 +1,30 @@
 # Canasta YAML file for extensions for MediaWiki 1.39.
 # Where the repository is not specified, the Wikimedia Git repository for the
-# extension with that name is used, and the default branch used is REL1_39.
+# extension/skin with that name is used, and the default branch used is REL1_39.
 # Where the repository *is* specified, the default branch used is master.
+skins:
+  - chameleon:
+      commit: f34a56528ada14ac07e1b03beda41f775ef27606 # v. 4.2.1
+      repository: https://github.com/ProfessionalWiki/chameleon
+      additional steps:
+        - composer update
+  - CologneBlue:
+      commit: 4d588eb78d7e64e574f631c5897579537305437d
+  - MinervaNeue:
+      bundled: true
+  - Modern:
+      commit: fb6c2831b5f150e9b82d98d661710695a2d0f8f2
+  - MonoBook:
+      bundled: true
+  - Pivot:
+      branch: v2.3.0
+      commit: d79af7514347eb5272936243d4013118354c85c1
+  - Refreshed:
+      commit: 86f33620f25335eb62289aa18d342ff3b980d8b8
+  - Timeless:
+      bundled: true
+  - Vector:
+      bundled: true
 extensions:
   - AbuseFilter:
       bundled: true
