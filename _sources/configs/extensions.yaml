@@ -34,7 +34,8 @@ extensions:
       additional steps:
         - composer update
   - BreadCrumbs2:
-      commit: d53357a6839e94800a617de4fc451b6c64d0a1c8
+      branch: master
+      commit: 6008954939eb5da9c2a6ec45a38854fb17ae69d4
   - Cargo:
       branch: master
       commit: a2865938165c1389d852df762f8c85073859e5dd # v. 3.5.1
